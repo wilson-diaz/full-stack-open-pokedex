@@ -30,10 +30,10 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - name: deploy to prod
-        if: ${{github.event_name == 'push'}}
+        if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: lit-cove-71604
           heroku_email: wdfiguereo@gmail.com
           healthcheck: https://lit-cove-71604.herokuapp.com/health
