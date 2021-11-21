@@ -32,3 +32,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: lit-cove-71604
           heroku_email: wdfiguereo@gmail.com
+          healthcheck: https://lit-cove-71604.herokuapp.com/health
+          checkstring: ok
